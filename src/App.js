@@ -13,9 +13,11 @@ class App extends Component {
     }
 
     componentDidMount() {
+        const me = this;
+
         return get('2569610900').then(function(response) {
             console.log(response.match);
-            this.setState({
+            me.setState({
                 dota: response.match
             })
         })
